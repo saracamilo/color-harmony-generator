@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Paleta de Cores 🎨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Color Harmony Generator</h1>
+    </header>
+
+    <main class="palette-container">
+    </main>
+
+    <div class="controls">
+        <label for="color-mode">Modo de Harmonia:</label>
+        <select id="color-mode">
+            <option value="monochromatic">Monocromático</option>
+            <option value="analogic" selected>Análogo</option> 
+            <option value="complement">Complementar</option>
+            <option value="triad">Triádico</option>
+            <option value="quad">Quadrático</option>
+        </select>
+        <button id="generate-btn">
+            <i class="fas fa-sync-alt"></i> Gerar Paleta
+        </button>
+        <button id="save-btn">
+            <i class="fas fa-heart"></i> Salvar Favorita
+        </button>
+    </div>
+
+    <section class="saved-palettes">
+        <h2>Paletas Salvas</h2>
+        <div id="saved-palettes-list">
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

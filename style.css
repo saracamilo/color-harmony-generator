@@ -1,0 +1,235 @@
+/* Variáveis CSS para tipografia e cores padrão */
+:root {
+    --bg-color: #f7f7f7;
+    --text-color: #333;
+    --primary-color: #3f72af;
+    --secondary-color: #dbe2ef;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 🌈 Contêiner da Paleta: Flexbox Mágico */
+.palette-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 350px; /* Altura fixa para a paleta */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garantir que as bordas arredondadas funcionem */
+}
+
+/* Estilo Básico para CADA COR */
+.color-swatch {
+    flex-grow: 1; /* Faz com que cada cor ocupe o mesmo espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.3s ease; /* Transição suave para mudanças de cor */
+    cursor: pointer; /* Indica que é clicável */
+    position: relative;
+}
+
+.color-hex {
+    font-size: 1em;
+    font-weight: bold;
+    /* Estilos para garantir que o texto seja visível sobre cores claras/escuras */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 5px 0;
+    opacity: 0.9;
+}
+
+/* Botão de Bloqueio */
+.lock-btn {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Empurra o botão para a parte inferior */
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.lock-btn:hover {
+    opacity: 1;
+}
+
+/* Controles (Botões Gerar/Salvar) */
+.controls {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.controls button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#generate-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#generate-btn:hover {
+    background-color: #305f8c;
+}
+
+#save-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#save-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Seção de Paletas Salvas (Incompleto, vamos terminar depois) */
+.saved-palettes {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+}
+#saved-palettes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Paletas Salvas */
+.saved-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.mini-palette {
+    display: flex;
+    gap: 2px;
+    flex-grow: 1;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.mini-palette div {
+    flex-grow: 1;
+    border-radius: 3px;
+}
+
+.load-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.load-btn:hover {
+    background-color: #27ae60;
+}
+
+.controls {
+    margin-top: 30px;
+    display: flex; 
+    gap: 15px;
+    align-items: center;
+}
+
+.controls label {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#color-mode {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: white;
+    color: var(--text-color);
+    cursor: pointer;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color 0.3s;
+}
+
+#color-mode:hover,
+#color-mode:focus {
+    border-color: #305f8c;
+    outline: none;
+}
+
+.controls button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.saved-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.saved-item-actions {
+    display: flex;
+    gap: 5px;
+}
