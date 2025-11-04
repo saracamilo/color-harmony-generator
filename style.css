@@ -1,4 +1,3 @@
-/* Variáveis CSS para tipografia e cores padrão */
 :root {
     --bg-color: #f7f7f7;
     --text-color: #333;
@@ -28,41 +27,37 @@ header {
     margin-bottom: 30px;
 }
 
-/* 🌈 Contêiner da Paleta: Flexbox Mágico */
 .palette-container {
     display: flex;
     width: 100%;
     max-width: 1000px;
-    height: 350px; /* Altura fixa para a paleta */
+    height: 350px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Garantir que as bordas arredondadas funcionem */
+    overflow: hidden;
 }
 
-/* Estilo Básico para CADA COR */
 .color-swatch {
-    flex-grow: 1; /* Faz com que cada cor ocupe o mesmo espaço */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    transition: all 0.3s ease; /* Transição suave para mudanças de cor */
-    cursor: pointer; /* Indica que é clicável */
+    transition: all 0.3s ease;
+    cursor: pointer;
     position: relative;
 }
 
 .color-hex {
     font-size: 1em;
     font-weight: bold;
-    /* Estilos para garantir que o texto seja visível sobre cores claras/escuras */
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
     color: white; 
     padding: 5px 0;
     opacity: 0.9;
 }
 
-/* Botão de Bloqueio */
 .lock-btn {
     background: rgba(0, 0, 0, 0.4);
     color: white;
@@ -70,7 +65,7 @@ header {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: auto; /* Empurra o botão para a parte inferior */
+    margin-top: auto;
     opacity: 0.8;
     transition: opacity 0.2s;
 }
@@ -79,7 +74,6 @@ header {
     opacity: 1;
 }
 
-/* Controles (Botões Gerar/Salvar) */
 .controls {
     margin-top: 30px;
     display: flex;
@@ -113,7 +107,6 @@ header {
     background-color: #c0392b;
 }
 
-/* Seção de Paletas Salvas (Incompleto, vamos terminar depois) */
 .saved-palettes {
     margin-top: 50px;
     width: 100%;
@@ -127,7 +120,6 @@ header {
     margin-top: 15px;
 }
 
-/* Paletas Salvas */
 .saved-item {
     display: flex;
     align-items: center;
